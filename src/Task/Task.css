@@ -1,0 +1,62 @@
+.task_item_blc {
+    margin: 0 5px 5px 5px;
+    border: 1px solid #000;
+    display: flex;
+    padding: 10px;
+}
+
+.task_add {
+    font-size: 30px;
+    margin: 0 0 10px 10px;
+    color: rgb(104, 216, 0);
+    cursor: pointer;
+}
+
+.text_style_icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.back_icon {
+    color: orange;
+}
+
+.cash_icon {
+    color: green;
+}
+
+.warn_icon {
+    color: red;
+}
+
+.question_icon {
+    color: blue;
+}
+
+.edit_icon {
+    color: gray;
+    cursor: pointer;
+}
+
+.task_form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.task_category, .task_title, .task_text{
+    font-family: 'Roboto', serif;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.form_open {
+    display: block;
+}
+
+.form_close {
+    display: none;
+}

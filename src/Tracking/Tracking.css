@@ -1,0 +1,74 @@
+.track-blc {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.track-item {
+    position: relative;
+    width: 230px;
+}
+
+.track {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid gray;
+    margin: 0 5px 5px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.track:nth-child(2n){
+    margin-right: 0;
+} 
+
+.green {
+    background-color: yellowgreen;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.more_icon {
+    font-size: 20px;
+    color: blue;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    margin: 0 10px 5px 0;
+}
+
+.track-details {
+    background-color: #fff;
+    border: 1px solid gray;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 20px;
+    width: 200px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.sender-icon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: rebeccapurple;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.close_icon {
+    font-size: 20px;
+    color: gray;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+}

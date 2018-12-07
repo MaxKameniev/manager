@@ -1,0 +1,20 @@
+.form_wrapper {
+    margin: 20px;
+}
+
+.form_task-type {
+    margin-bottom: 10px;
+}
+
+.form_task-title {
+    margin-bottom: 10px;
+}
+
+.form_task-text {
+    margin-bottom: 10px;
+}
+.form_task-tt {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 5px;
+}

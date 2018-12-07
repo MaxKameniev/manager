@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.logo {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+}
+
+.header__timer {
+    font-family: 'Roboto', serif;
+    font-size: 18px;
+}
