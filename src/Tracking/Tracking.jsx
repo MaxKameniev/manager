@@ -8,7 +8,7 @@ export default class Tracking extends Component {
 
     state = {
         track: [],
-        keys: ["personal data"],
+		keys: ["personal data"],
         endpoint: "personal data"
     }
 
