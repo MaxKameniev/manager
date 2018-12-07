@@ -20,25 +20,25 @@ export default class Tracking extends Component {
 
     componentDidMount() {
         const { timeFrom, timeTo } = this.getRequestDate();
-        this.state.keys.map(key => axios({
-            method: 'post',
-            url: this.state.endpoint,
-            data: {
-                "apiKey": key,
-                "modelName": "InternetDocument",
-                "calledMethod": "getDocumentList",
-                "methodProperties": {
-                    "DateTimeFrom": timeFrom,
-                    "DateTimeTo": timeTo,
-                    "Page": "1",
-                    "GetFullList": "0"
+        this.state.keys.map(key => 
+            axios({
+                method: 'post',
+                url: this.state.endpoint,
+                data: {
+                    "apiKey": key,
+                    "modelName": "InternetDocument",
+                    "calledMethod": "getDocumentList",
+                    "methodProperties": {
+                        "DateTimeFrom": timeFrom,
+                        "DateTimeTo": timeTo,
+                        "Page": "1",
+                        "GetFullList": "0"
+                    }
                 }
-            }
-        })
-        .then(result => this.setState({ track: [result.data.data, ...this.state.track].reduce((a, b) => a.concat(b)) }))
+            })
+            .then(result => this.setState({ track: [result.data.data, ...this.state.track].reduce((a, b) => a.concat(b)) }))
         )
     }
-
 
     render() {
         return (

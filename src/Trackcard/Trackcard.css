@@ -1,0 +1,32 @@
+.trackcard__status--icon {
+    position: absolute;
+    top: 25px;
+    right: 13px;
+    font-size: 15px;
+    color: transparent;
+}
+
+.green {
+    color: yellowgreen;
+}
+
+.red {
+    color: red;
+}
+
+.trackcard__number {
+    margin-bottom: 5px;
+}
+
+.trackcard__status--name {
+    margin-bottom: 5px;
+}
+
+.trackcard__sender--icon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: rebeccapurple;
+    font-size: 15px;
+    font-weight: bold;
+}

@@ -22,14 +22,6 @@
     margin-right: 0;
 } 
 
-.green {
-    background-color: yellowgreen;
-}
-
-.yellow {
-    background-color: yellow;
-}
-
 .more_icon {
     font-size: 20px;
     color: blue;
@@ -54,15 +46,6 @@
     font-size: 14px;
 }
 
-.sender-icon {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    color: rebeccapurple;
-    font-size: 15px;
-    font-weight: bold;
-}
-
 .close_icon {
     font-size: 20px;
     color: gray;
@@ -72,3 +55,4 @@
     cursor: pointer;
     margin: 10px 10px 0 0;
 }
+

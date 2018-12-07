@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Trackcard.css';
 import TrackingDetails from '../TrackingDetails/TrackingDetails';
 
 export default class Trackcard extends Component {
@@ -15,24 +16,27 @@ export default class Trackcard extends Component {
     }
     render() {
         const { StateName, IntDocNumber, SenderDescription, DateLastUpdatedStatus, StateId } = this.props.data;
+        const { persons, showDetails} = this.state;
+        const parcelRecived = "Одержано";
+        const parcelArrived = "Прибув у відділення";
+        const refusalToReceive = "Відмова від отримання";
         return (
             <div>
-                {StateName !== "Одержано"
+                {StateName !== parcelRecived
                     ? <div className="track-item">
-                        <div className={StateName === "Прибув у відділення"
-                            ? "track green"
-                            : StateName === "Відмова від отримання"
-                                ? "track yellow"
-                                : "track"}>
-                            <div>{IntDocNumber}</div>
-                            <div>Код статуса - {StateId}</div>
-                            <div className="sender-icon">
-                                {this.state.persons.map(el => el.name === SenderDescription ? el.id : null)}</div>
-                            <div>{StateName}</div>
+                        <div className="track">
+                            <div className="trackcard__number">{IntDocNumber}</div>
+                            <i className={StateName === parcelArrived
+                            ? "trackcard__status--icon green fas fa-circle"
+                            : StateName === refusalToReceive
+                                ? "trackcard__status--icon red fas fa-circle"
+                                : "trackcard__status--icon fas fa-circle"}></i>
+                            <div className="trackcard__sender--icon">{persons.map(el => el.name === SenderDescription ? el.id : null)}</div>
+                            <div className="trackcard__status--name">{StateName}</div>
                             <div>{DateLastUpdatedStatus}</div>
                             <i onClick={this.showTrackingDetails} className="more_icon fas fa-info-circle"></i>
                         </div>
-                        <TrackingDetails data={this.props.data} isShow={this.state.showDetails} toShow={this.showTrackingDetails} />
+                        <TrackingDetails data={this.props.data} isShow={showDetails} toShow={this.showTrackingDetails} />
                     </div>
                     : null}
             </div>
