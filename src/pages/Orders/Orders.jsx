@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Orders = () => {
+export const Orders = () => {
     return (
         <div>
             !!!
         </div>
     );
 };
-
-export default Orders;

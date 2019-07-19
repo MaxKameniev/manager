@@ -4,24 +4,6 @@
     margin: 10px;
 }
 
-.track-item {
-    position: relative;
-    width: 230px;
-}
-
-.track {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid gray;
-    margin: 0 5px 5px 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-}
-
-.track:nth-child(2n){
-    margin-right: 0;
-} 
-
 .more_icon {
     font-size: 20px;
     color: blue;

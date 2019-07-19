@@ -1,8 +1,8 @@
 import React from 'react';
-import Task from '../Task/Task';
+import Task from '../../components/Task';
 import './Tasklist.css';
 
-const Tasklist = () => {
+export const Tasklist = () => {
     return (
         <div className="tasklist_blc">
             <div></div>
@@ -12,5 +12,3 @@ const Tasklist = () => {
         </div>
     );
 };
-
-export default Tasklist;

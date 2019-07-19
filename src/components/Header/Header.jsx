@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Header.css';
 import moment from 'moment'; 
 
-class Header extends Component {
+export class Header extends Component {
 
     state = {
         time: this.time,
@@ -24,5 +24,3 @@ render () {
     )
 }
 }
-
-export default Header;
