@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TrackingDetails = ({isShow, toShow, data}) => {
+export const TrackingDetails = ({isShow, toShow, data}) => {
     return (
         <div>
             {isShow
@@ -15,5 +15,3 @@ const TrackingDetails = ({isShow, toShow, data}) => {
         </div>
     );
 };
-
-export default TrackingDetails;

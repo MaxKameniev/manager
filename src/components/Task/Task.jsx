@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import NewTask from '../NewTask/NewTask';
 import Editform from '../Editform/Editform';
-import { TaskContext } from '../Context/Context';
+import { TaskContext } from '../../Context/Context';
 import './Task.css';
 
-class Task extends Component {
+export class Task extends Component {
 
     render() {
         return (
@@ -45,5 +45,3 @@ class Task extends Component {
         );
     };
 };
-
-export default Task;

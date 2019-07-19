@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from './Header/Header';
-import Menu from './Menu/Menu';
-import Main from './Main/Main';
-import ContextProvider from './Context/Context';
+import Header from '../src/components/Header';
+import Menu from '../src/components/Menu';
+import Main from './pages/Main';
+import ContextProvider from '../src/Context/Context';
 import './App.css';
 
 

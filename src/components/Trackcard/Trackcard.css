@@ -1,3 +1,14 @@
+.trackcard__item {
+    position: relative;
+    width: 230px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid gray;
+    margin: 0 5px 5px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
 .trackcard__status--icon {
     position: absolute;
     top: 25px;

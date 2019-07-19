@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import './NewTask.css';
-import { TaskContext } from '../Context/Context';
+import { TaskContext } from '../../Context/Context';
 
 export default class NewTask extends Component {
-
-    state = {
-        options: ['Возврат', 'Оплата', 'Вопрос', 'Брак'],
-    }
 
     render() {
         return (
@@ -17,7 +13,7 @@ export default class NewTask extends Component {
                             <div className="form_task-type">
                                 <span className="form_task-tt">Тип задачи:</span>
                                 <select name="categoryTitle">
-                                    {this.state.options(el => <option>{el}</option>)}
+                                    <option>1</option>
                                 </select>
                             </div>
                             <div className="form_task-title">
