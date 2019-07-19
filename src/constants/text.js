@@ -10,6 +10,7 @@ export const menu = [
 ]
 
 export const status = {
+    privat: 'Приватна особа',
     parcelRecived: "Одержано",
     parcelArrived: "Прибув у відділення",
     refusalToReceive: "Відмова від отримання"
