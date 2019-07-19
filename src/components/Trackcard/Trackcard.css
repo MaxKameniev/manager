@@ -1,6 +1,6 @@
 .trackcard__item {
     position: relative;
-    width: 230px;
+    width: 300px;
     padding: 10px;
     font-size: 14px;
     border: 1px solid gray;
@@ -11,10 +11,14 @@
 
 .trackcard__status--icon {
     position: absolute;
-    top: 25px;
-    right: 13px;
-    font-size: 15px;
+    top: 5px;
+    right: 30px;
+    font-size: 20px;
     color: transparent;
+}
+
+.trackcard__recipientName {
+    margin: 10px 0;
 }
 
 .green {
@@ -29,14 +33,14 @@
     margin-bottom: 5px;
 }
 
-.trackcard__status--name {
-    margin-bottom: 5px;
+.trackcard__stateName {
+    font-size: 14px;
 }
 
 .trackcard__sender--icon {
     position: absolute;
     top: 5px;
-    right: 10px;
+    right: 25px;
     color: rebeccapurple;
     font-size: 15px;
     font-weight: bold;
