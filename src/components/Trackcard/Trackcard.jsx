@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { persons } from '../../config/api-creds'
+
 import { status } from '../../constants/text'
 import TrackingDetails from '../TrackingDetails';
 import './Trackcard.css';
@@ -17,13 +17,13 @@ export class Trackcard extends Component {
         }))
     }
     render() {
-        console.log(this.props.data);
         const { 
             StateName,
             IntDocNumber,
             DateLastUpdatedStatus,
             RecipientDescription,
-            RecipientContactPerson
+            RecipientContactPerson,
+            BackwardDeliveryMoney
         } = this.props.data;
         const { showDetails } = this.state;
         const { parcelRecived, parcelArrived, refusalToReceive} = status;
@@ -31,7 +31,10 @@ export class Trackcard extends Component {
             <div>
                 {StateName !== parcelRecived
                     ? <div className="trackcard__item">
-                            <div className="trackcard__number">{IntDocNumber}</div>
+                            <div className="trackcard__number">
+                                {IntDocNumber}
+                                {BackwardDeliveryMoney !== 0 ? ` - ${BackwardDeliveryMoney} UAH` : null}
+                            </div>
                             <i className={StateName === parcelArrived
                                 ? "trackcard__status--icon green fas fa-circle"
                                 : StateName === refusalToReceive
@@ -57,7 +60,8 @@ export class Trackcard extends Component {
                             toShow={this.showTrackingDetails}
                         />
                     </div>
-                    : null}
+                    : null
+                }
             </div>
         )
     }

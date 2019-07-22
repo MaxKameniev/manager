@@ -6,6 +6,7 @@ import { creds } from '../../config/api-creds';
 import { api } from '../../constants/text';
 import Trackcard from '../../components/Trackcard';
 import './Tracking.css';
+import { TrackingStat } from '../../components/TrackingStat/TrackingStat';
 
 export class Tracking extends Component {
 
@@ -48,14 +49,17 @@ export class Tracking extends Component {
 
     render() {
         return (
-            <div className="track-blc">
-                {this.state.track.sort((a, b) => b.StateId - a.StateId)
-                    .map(data => 
-                        <Trackcard
-                            data={data}
-                            key={data.IntDocNumber}
-                        />
-                )}
+            <div>
+                <TrackingStat data={this.state.track}/>
+                <div className="track-blc">
+                    {this.state.track.sort((a, b) => b.StateId - a.StateId)
+                        .map(data => 
+                            <Trackcard
+                                data={data}
+                                key={data.IntDocNumber}
+                            />
+                    )}
+                </div>
             </div>
         )
     }
