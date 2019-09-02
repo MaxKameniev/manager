@@ -12,7 +12,7 @@ class App extends Component {
     showdetails: false,
   }
 
-    showDetailsBlock = () => {
+    showDetailsBlock() {
     this.setState(prev => ({
       showdetails: !prev.showdetails
     }))
