@@ -14,13 +14,13 @@ export class Tracking extends Component {
         track: []
     }
 
-    getRequestDate = () => {
-        const timeFrom = moment().subtract(api.mounthRange, 'months').format('DD.MM.YYYY');
-        const timeTo = moment().format('DD.MM.YYYY');
+    getRequestDate() {
+        const timeFrom = moment().subtract(api.monthRange, 'months').format(api.dateFormat);
+        const timeTo = moment().format(api.dateFormat);
         return { timeFrom, timeTo };
     }
 
-    post = (endpoint, key, timeFrom, timeTo) => {
+    post(endpoint, key, timeFrom, timeTo) {
         return {
             method: 'post',
             url: endpoint,

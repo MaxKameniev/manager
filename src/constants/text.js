@@ -1,6 +1,7 @@
 export const api = {
     endpoint: "https://api.novaposhta.ua/v2.0/json/",
-    mounthRange: 1
+    monthRange: 1,
+    dateFormat: 'DD.MM.YYYY'
 }
 
 export const menu = [
