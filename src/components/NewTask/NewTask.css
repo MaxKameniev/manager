@@ -2,18 +2,18 @@
     margin: 20px;
 }
 
-.form_task-type {
+.task_type {
     margin-bottom: 10px;
 }
 
-.form_task-title {
+.task_title {
     margin-bottom: 10px;
 }
 
-.form_task-text {
+.task_text {
     margin-bottom: 10px;
 }
-.form_task-tt {
+.task_tt {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     margin-right: 5px;
