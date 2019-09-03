@@ -16,3 +16,10 @@ export const status = {
     parcelArrived: "Прибув у відділення",
     refusalToReceive: "Відмова від отримання"
 }
+
+export const awesomeIcons = {
+    info: 'fas fa-info-circle',
+    close: 'far fa-times-circle'
+};
+
+export const logo = 'BM CRM';

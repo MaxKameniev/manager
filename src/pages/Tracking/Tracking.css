@@ -1,39 +1,6 @@
-.track-blc {
+.track_blc {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
-}
-
-.more_icon {
-    font-size: 20px;
-    color: blue;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    cursor: pointer;
-}
-
-.track-details {
-    background-color: #fff;
-    border: 1px solid gray;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    padding: 20px;
-    width: 200px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-}
-
-.close_icon {
-    font-size: 20px;
-    color: gray;
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    margin: 10px 10px 0 0;
 }
 
