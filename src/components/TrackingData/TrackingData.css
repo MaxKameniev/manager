@@ -1,4 +1,4 @@
-.trackcard__item {
+.item {
     position: relative;
     width: 300px;
     padding: 10px;
@@ -9,39 +9,50 @@
     font-size: 15px;
 }
 
-.trackcard__status--icon {
+.status_icon {
     position: absolute;
     top: 5px;
     right: 30px;
-    font-size: 20px;
-    color: transparent;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 }
 
-.trackcard__recipientName {
+.recipientName {
     margin: 10px 0;
 }
 
 .green {
-    color: yellowgreen;
+    background-color: yellowgreen;
 }
 
 .red {
-    color: red;
+    background-color: red;
 }
 
-.trackcard__number {
+.number {
     margin-bottom: 5px;
 }
 
-.trackcard__stateName {
+.stateName {
     font-size: 14px;
 }
 
-.trackcard__sender--icon {
+.sender_icon {
     position: absolute;
     top: 5px;
     right: 25px;
     color: rebeccapurple;
     font-size: 15px;
     font-weight: bold;
+}
+
+.more_icon {
+    font-size: 20px;
+    color: blue;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
 }
