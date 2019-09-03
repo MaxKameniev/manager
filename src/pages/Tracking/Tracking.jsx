@@ -5,8 +5,9 @@ import moment from 'moment';
 import { creds } from '../../config/api-creds';
 import { api } from '../../constants/text';
 import Trackcard from '../../components/Trackcard';
-import './Tracking.css';
-import { TrackingStat } from '../../components/TrackingStat/TrackingStat';
+import TrackingStat from '../../components/TrackingStat';
+
+import style from './Tracking.css';
 
 export class Tracking extends Component {
 
@@ -51,7 +52,7 @@ export class Tracking extends Component {
         return (
             <div>
                 <TrackingStat data={this.state.track}/>
-                <div className="track-blc">
+                <div className={style.track_blc}>
                     {this.state.track.sort((a, b) => b.StateId - a.StateId)
                         .map(data => 
                             <Trackcard
@@ -59,7 +60,7 @@ export class Tracking extends Component {
                                 key={data.IntDocNumber}
                             />
                     )}
-                </div>
+            </div>
             </div>
         )
     }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import './Header.css';
-import moment from 'moment'; 
+import moment from 'moment';
+import { logo } from '../../constants/text'; 
+
+import style from './Header.css';
 
 export class Header extends Component {
 
@@ -18,8 +20,9 @@ export class Header extends Component {
     
 render () {
     return (
-        <div className="header">
-            <div className="logo">BM CRM</div><div className="header__timer">{this.state.time}</div>
+        <div className={style.header}>
+            <div className={style.logo}>{logo}</div>
+            <div className={style.header_timer}>{this.state.time}</div>
         </div>
     )
 }

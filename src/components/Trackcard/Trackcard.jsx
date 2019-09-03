@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-import { status } from '../../constants/text'
+import { status } from '../../constants/text'; 
 import TrackingDetails from '../TrackingDetails';
-import './Trackcard.css';
-
+import TrackingData from '../TrackingData';
 
 export class Trackcard extends Component {
 
@@ -17,49 +16,22 @@ export class Trackcard extends Component {
         }))
     }
     render() {
-        const { 
-            StateName,
-            IntDocNumber,
-            DateLastUpdatedStatus,
-            RecipientDescription,
-            RecipientContactPerson,
-            BackwardDeliveryMoney
-        } = this.props.data;
-        const { showDetails } = this.state;
-        const { parcelRecived, parcelArrived, refusalToReceive} = status;
+        // console.log(this.props.data);
         return (
             <div>
-                {StateName !== parcelRecived
-                    ? <div className="trackcard__item">
-                            <div className="trackcard__number">
-                                {IntDocNumber}
-                                {BackwardDeliveryMoney !== 0 ? ` - ${BackwardDeliveryMoney} UAH` : null}
-                            </div>
-                            <i className={StateName === parcelArrived
-                                ? "trackcard__status--icon green fas fa-circle"
-                                : StateName === refusalToReceive
-                                    ? "trackcard__status--icon red fas fa-circle"
-                                    : "trackcard__status--icon fas fa-circle"}></i>
-                            {/* <div className="trackcard__sender--icon">
-                                {persons.map(el => el.name === SenderDescription 
-                                    ? el.id 
-                                    : null)
-                                }
-                            </div> */}
-                            <div className="trackcard__recipientName">
-                                {RecipientDescription === status.privat
-                                    ? RecipientContactPerson.slice(0, 30)
-                                    : RecipientDescription.slice(0, 30)
-                                }
-                            </div>
-                            <div className="trackcard__stateName">{StateName} - {DateLastUpdatedStatus.slice(0, 16)}</div>
-                            <i onClick={this.showTrackingDetails} className="more_icon fas fa-info-circle"></i>
-                        <TrackingDetails 
-                            data={this.props.data}
-                            isShow={showDetails}
-                            toShow={this.showTrackingDetails}
-                        />
-                    </div>
+                {this.props.data.StateName !== status.parcelRecived
+                    ? 
+                        <div>
+                            <TrackingData
+                                data={this.props.data}
+                                toShow={this.showTrackingDetails}
+                            />
+                            <TrackingDetails 
+                                data={this.props.data}
+                                isShow={this.state.showDetails}
+                                toShow={this.showTrackingDetails}
+                            />
+                        </div>
                     : null
                 }
             </div>
