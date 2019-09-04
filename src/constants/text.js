@@ -23,3 +23,18 @@ export const awesomeIcons = {
 };
 
 export const logo = 'BM CRM';
+
+export const calcConsts = {
+    backSum: 'BackwardDeliverySum',
+    stateField: 'StateName',
+    backMoneyTitle: 'Сумма к возврату',
+    shipedParcel: 'Printed',
+    shipedParcelTitle: 'Отправленно посылок'
+}
+
+export const general = {
+    logo: 'BM CRM',
+    currency: 'грн.',
+    criticalDays: '4 days',
+    preCriticalDays: '3 days',
+}

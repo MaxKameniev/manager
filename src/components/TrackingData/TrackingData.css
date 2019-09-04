@@ -9,18 +9,18 @@
     font-size: 15px;
 }
 
-.status_icon {
-    position: absolute;
-    top: 5px;
-    right: 30px;
-    background-color: transparent;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-}
-
 .recipientName {
     margin: 10px 0;
+}
+
+.status_icon {
+    position: absolute;
+    top: 4px;
+    right: 30px;
+    padding: 5px;
+    background-color: transparent;
+    font-size: 11px;
+    border-radius: 5px;
 }
 
 .green {
@@ -29,6 +29,10 @@
 
 .red {
     background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
 }
 
 .number {
@@ -55,4 +59,9 @@
     right: 5px;
     top: 5px;
     cursor: pointer;
+}
+
+.money {
+    color:red;
+    text-decoration: underline;
 }
