@@ -48,10 +48,17 @@ export class Tracking extends Component {
         )
     }
 
+    totalSum(data, sum, key, code) {
+        return data.reduce((acc, item) => item[key] !== code ? acc + Number(item[sum]) : null, 0);
+    }
+
     render() {
         return (
             <div>
-                <TrackingStat data={this.state.track}/>
+                <TrackingStat
+                    data={this.state.track}
+                    totalSum={this.totalSum}
+                />
                 <div className={style.track_blc}>
                     {this.state.track.sort((a, b) => b.StateId - a.StateId)
                         .map(data => 
