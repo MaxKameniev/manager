@@ -39,6 +39,10 @@
     background-color: orangered;
 }
 
+.green, .red, .yellow, .orange {
+    border: solid 1px black;
+}
+
 .number {
     margin-bottom: 5px;
 }

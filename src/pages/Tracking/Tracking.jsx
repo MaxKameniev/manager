@@ -46,6 +46,7 @@ export class Tracking extends Component {
             .then(result => this.setState({ track: [result.data.data, ...this.state.track]
                 .reduce((a, b) => a.concat(b)) }))
         )
+        
     }
 
     totalSum(data, sum, key, code) {
@@ -55,7 +56,7 @@ export class Tracking extends Component {
     render() {
         return (
             <div>
-                <TrackingStat
+                <TrackingStat                        
                     data={this.state.track}
                     totalSum={this.totalSum}
                 />

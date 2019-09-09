@@ -24,17 +24,15 @@ export const awesomeIcons = {
 
 export const logo = 'BM CRM';
 
-export const calcConsts = {
-    backSum: 'BackwardDeliverySum',
-    stateField: 'StateName',
-    backMoneyTitle: 'Сумма к возврату',
-    shipedParcel: 'Printed',
-    shipedParcelTitle: 'Отправленно посылок'
-}
+export const statistic = [
+    {title: 'Сумма к возврату', key: 'BackwardDeliverySum'},
+    {title: 'В процессе доставки', key: 'Printed'}
+]
 
 export const general = {
     logo: 'BM CRM',
     currency: 'грн.',
-    criticalDays: '4 days',
-    preCriticalDays: '3 days',
+    criticalPeriod: '4 days',
+    preCriticalPeriod: '3 days',
+    stateField: 'StateName',
 }

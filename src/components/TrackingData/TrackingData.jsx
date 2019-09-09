@@ -16,6 +16,8 @@ export const TrackingData = ({ data, toShow }) => {
     } = data;
     const { parcelArrived, refusalToReceive } = status;
     const { item, number, status_icon, recipientName, stateName, more_icon, green, red, money, yellow, orange } = style;
+    const { currency, criticalPeriod, preCriticalPeriod } = general;
+
     const daysAfterArrived = moment(DateLastUpdatedStatus).fromNow(true);
     const arrivedParcel = StateName === parcelArrived;
     const refusedParcel =  StateName === refusalToReceive;
@@ -25,7 +27,7 @@ export const TrackingData = ({ data, toShow }) => {
             <div className={number}>
                 {IntDocNumber}
                 {BackwardDeliverySum
-                    ? <span> - <span className={money}>{BackwardDeliverySum} {general.currency}</span></span>
+                    ? <span> - <span className={money}>{BackwardDeliverySum} {currency}</span></span>
                     : null}
             </div>
             <div className={recipientName}>
@@ -39,9 +41,9 @@ export const TrackingData = ({ data, toShow }) => {
             <div className={ 
                 refusedParcel
                     ? `${red} ${status_icon}`
-                    : arrivedParcel && daysAfterArrived === general.criticalDays
+                    : arrivedParcel && daysAfterArrived === criticalPeriod
                         ? `${orange} ${status_icon}`
-                        : arrivedParcel === general.preCriticalDays
+                        : arrivedParcel && daysAfterArrived === preCriticalPeriod
                             ? `${yellow} ${status_icon}`
                             : arrivedParcel && daysAfterArrived
                                 ? `${green} ${status_icon}`
