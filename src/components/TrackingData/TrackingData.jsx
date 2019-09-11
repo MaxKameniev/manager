@@ -41,7 +41,7 @@ export const TrackingData = ({ data, toShow }) => {
             <div className={ 
                 refusedParcel
                     ? `${red} ${status_icon}`
-                    : arrivedParcel && daysAfterArrived === criticalPeriod
+                    : arrivedParcel && (daysAfterArrived === criticalPeriod[0] || daysAfterArrived === criticalPeriod[1])
                         ? `${orange} ${status_icon}`
                         : arrivedParcel && daysAfterArrived === preCriticalPeriod
                             ? `${yellow} ${status_icon}`

@@ -32,7 +32,7 @@ export const statistic = [
 export const general = {
     logo: 'BM CRM',
     currency: 'грн.',
-    criticalPeriod: '4 days',
+    criticalPeriod: ['4 days', '5 days'],
     preCriticalPeriod: '3 days',
     stateField: 'StateName',
 }
